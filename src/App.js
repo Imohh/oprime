@@ -5,6 +5,10 @@ import contactImage from './images/contact.jpg'
 import section from './images/section.png'
 import apostrophe from './images/apostrophe.png'
 import apostrophe2 from './images/apostrophe2.png'
+import instagram from './images/instagram.png'
+import x from './images/x.png'
+import phone from './images/phone.png'
+import email from './images/email.png'
 
 function App() {
   return (
@@ -180,17 +184,22 @@ function App() {
           </div>
         </div>
         <div className="grid grid-cols-3 mb-10">
-          <div className="text-center">
+          <div className="text-center mx-auto">
+            <img className="inline-block mb-2" src={phone} alt="" />          
             <p className="uppercase text-white text-2xl mb-2">phone</p>
             <p className="text-white text-lg">+234 802 060 0313</p>
           </div>
-          <div className="text-center">
+          <div className="text-center mx-auto">
+            <img className="inline-block mb-2" src={email} alt="" />
             <p className="uppercase text-white text-2xl mb-2">email address</p>
             <p className="text-white">info@oprime.tech</p>
           </div>
-          <div className="text-center">
-            <p className="uppercase text-white text-2xl mb-2">socials</p>
-            <p className="text-white">instagram, twitter, facebook</p>
+          <div className="text-center mx-auto">
+            <p className="uppercase text-white text-2xl mb-2">follow us</p>
+            <div className="flex flex-row">
+              <a href="https://instagram.com/oprime.ng" target="_blank"><img className="w-8 h-8" src={instagram} alt="" /></a>
+              <a href="https://twitter.com/oprimeng" target="_blank"><img className="w-8 h-8" src={x} alt="" /></a>
+            </div>
           </div>
         </div>
       </div>
