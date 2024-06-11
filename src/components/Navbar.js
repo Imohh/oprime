@@ -39,25 +39,28 @@ const Footer = () => {
 		<>
 			<div className={`fixed w-full py-5 lg:py-6 z-50 transition-colors duration-300 ${scrollColor} 
 				${scrollShadow ? 'shadow-md' : ''}`}>
-				<div className="grid grid-cols-2 lg:grid-cols-3 w-full lg:w-full xl:w-2/3 lg:px-10 mx-auto">
-					<div className="pl-4 lg:pl-0 xl:pl-0 md:pl-4">
-						<p className="font-bold text-3xl capitalize"><span className="text-[#ff5757]">o</span>prime tech</p>
-						{/*<a href="/"><img className="xs:w-24 sm:w-24 md:w-24 lg:w-28" src={apostrophe} alt="Grep Logo" /></a>*/}
-					</div>
-					<div className="
-						hidden 
-						lg:flex 
-						lg:flex-row
-				    	lg:static
-						lg:shadow-none
-						lg:justify-end
-		    		    lg:w-full">
-						<a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/">home</a>
-						<a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/about">about</a>
-						<a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/services">services</a>
-						<a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/contact">contact</a>
-					</div>
+				<div className="flex justify-between items-center w-full lg:w-full xl:w-full lg:px-10 mx-auto">
+				  <div className="w-full pl-4 lg:pl-0 xl:pl-0 md:pl-4">
+				    <p className="font-bold text-3xl capitalize">
+				      <span className="text-[#ff5757]">o</span>prime tech
+				    </p>
+				    {/*<a href="/"><img className="xs:w-24 sm:w-24 md:w-24 lg:w-28" src={apostrophe} alt="Grep Logo" /></a>*/}
+				  </div>
+				  <div className="
+				    hidden 
+				    lg:flex 
+				    lg:flex-row
+				    lg:static
+				    lg:shadow-none
+				    lg:justify-end
+				    lg:w-full">
+				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/">home</a>
+				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/about">about</a>
+				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/services">services</a>
+				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/contact">contact</a>
+				  </div>
 				</div>
+
 				{show && 
 					<div className="bg-white transition delay-150 duration-300 ease-in-out
 					lg:hidden shadow-lg" id="mobile-menu">

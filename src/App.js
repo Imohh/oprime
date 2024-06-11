@@ -1,3 +1,4 @@
+import './index.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Globe from 'react-globe.gl';
@@ -11,11 +12,17 @@ import phone from './images/phone.png'
 import email from './images/email.png'
 import worldmap from './images/map.jpg'
 import hero from './images/hero.png'
-import chekam from './images/clients/chekam.png'
-import recreate from './images/clients/recreate.png'
-import joel from './images/clients/joel.png'
+import chekam from './images/clients/chekam-logo.png'
+import recreate from './images/clients/recreate-logo.png'
+import joel from './images/clients/joel-logo.png'
 import glintz from './images/clients/glintz-white.png'
-import eminence from './images/clients/eminence.png'
+import eminence from './images/clients/eminence-logo.png'
+import eminenceImg from './images/clients/eminence.png'
+import chekamImg from './images/clients/chekam.png'
+import recreateImg from './images/clients/recreate.png'
+import joelImg from './images/clients/joel.png'
+import glintzImg from './images/clients/glintz.png'
+import mickkycutzImg from './images/clients/mickkycutz.png'
 
 function App() {
   return (
@@ -36,7 +43,7 @@ function App() {
       </div>
 
       {/*ABOUT*/}
-      <div className="xl:px-20 xl:py-[60px] px-3 py-10">
+      <div className="xl:px-20 xl:py-[80px] px-3 py-10">
         <p className="text-center text-[#ff5757] uppercase text-4xl font-bold pb-5 tracking-[.1em]">about us</p>
         <div className="xl:px-[20%] p-10 text-center">
           <p className="text-lg">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
@@ -52,7 +59,7 @@ function App() {
 
       {/*SERVICES*/}
       <div className="xl:px-20 lx:py-20 px-3 py-10 bg-[#e9eef180]">
-        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold pb-10 tracking-[.1em]">services</p>
+        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold py-10 tracking-[.1em]">services</p>
         <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#f1f1f1] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
@@ -114,9 +121,54 @@ function App() {
       </div>
 
       {/*CLIENTS*/}
-      <div className="xl:px-40 xl:py-[200px] px-5 py-20 bg-[#ff5757]">
-        <p className="text-center text-white uppercase text-4xl font-bold pb-20 tracking-[.1em]">our clients</p>
-        <div className="xl:flex xl:flex-row xl:items-center xl:justify-center xl:space-x-2
+
+
+
+      <div className="xl:px-[20%] px-10 xl:py-20 lg:py-20 md:py-20 py-10 text-center">
+          <h3 className="xl:text-4xl lg:text-4xl md:text-3xl text-2xl uppercase text-custom-gray-head-text font-semibold tracking-[.15em] mb-10">our works</h3>
+
+          {/*GALLERY*/}
+          <div id="flexbox" className="flex items-center justify-center">
+              <div class="column">
+                <a href="https://joeladu.com">
+                  <img src={joelImg} alt="Image" width="100%" />
+                </a>
+                <a href="https://chekam.com">
+                  <img src={chekamImg} alt="Image" width="100%" />
+                </a>
+                {/*<img src={third} alt="Image" width="100%" />*/}
+              </div>
+              <div class="column">
+                <a href="https://glintzphotography.org">
+                  <img src={glintzImg} alt="Image" width="100%" />
+                </a>
+                <a href="https://recreateafrica.org">
+                  <img src={recreateImg} alt="Image" width="100%" />
+                </a>
+              </div>
+              <div class="column">
+                <a href="https://mickkycutz.africa">
+                  <img src={mickkycutzImg} alt="Image" width="100%" />
+                </a>
+                {/*<img src="https://docs.google.com/uc?export=download&id=1I-bDFOoYZ-XUZkwDxRJmtiR_7DGVn_Eb" alt="Image" width="100%" />*/}
+                <a href="https://eminencebygtx.com">
+                  <img src={eminenceImg} alt="Image" width="100%" />
+                </a>
+              </div>
+                  
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+      <div className="xl:px-40 xl:py-[40px] px-5 py-20 bg-[#ff5757]">
+        <p className="text-center text-white uppercase text-4xl font-bold py-10 tracking-[.1em]">our clients</p>
+        <div className="xl:flex xl:flex-row xl:items-center xl:justify-center xl:space-x-2 xl:py-[100px]
           lg:flex lg:flex-row lg:items-center lg:justify-center lg:space-x-2
           grid grid-cols-1 space-y-8">
           <div className="flex justify-center">
@@ -132,14 +184,14 @@ function App() {
             <img src={joel} alt="logo" className="xl:w-1/5 lg:w-1/5 w-1/5" />
           </div>
           <div className="flex justify-center">
-            <img src={eminence} alt="logo" className="xl:w-full lg:w-full w-2/5" />
+            <img src={eminence} alt="logo" className="xl:w-[400px] lg:w-[400px] w-2/5" />
           </div>
         </div>
       </div>
 
       {/*WHY CHOOSE US*/}
       <div className="xl:px-20 lx:py-20 px-3 py-10">
-        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold pb-10 tracking-[.1em]">why choose us ?</p>
+        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold py-10 tracking-[.1em]">why choose us ?</p>
         <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#fff] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
