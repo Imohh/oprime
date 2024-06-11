@@ -30,10 +30,10 @@ function App() {
       <Navbar />
       {/*HERO*/}
       <div className="
-        py-40 px-20
+        xl:py-40 xl:px-20 lg:py-40 lg:px-20 py-20 px-4
         flex flex-col items-center justify-center
         bg-[#e9eef180]">
-        <div className="text-center w-3/5 m-auto">
+        <div className="text-center xl:w-3/5 lg:w-3/5 md:w-3/5 w-4/5 m-auto xl:mt-o lg:mt-o md:mt-o mt-10">
           <p className="text-3xl font-semibold">We help companies have a digital presence</p>
           <p className="mt-10">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
           dedicated to helping brands thrive in the online landscape. We specialize in crafting exceptional 
@@ -282,7 +282,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 mb-10">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-10 mb-10">
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={phone} alt="" width="30" height="40" />          
             <p className="uppercase text-white text-2xl mb-2">phone</p>
@@ -295,7 +295,7 @@ function App() {
           </div>
           <div className="text-center mx-auto">
             <p className="uppercase text-white text-2xl mb-2">follow us</p>
-            <div className="flex flex-row">
+            <div className="flex flex-row items-center justify-center">
               <a href="https://instagram.com/oprime.ng" target="_blank"><img className="w-8 h-8" src={instagram} alt="" /></a>
               <a href="https://twitter.com/oprimeng" target="_blank"><img className="w-8 h-8" src={x} alt="" /></a>
             </div>
