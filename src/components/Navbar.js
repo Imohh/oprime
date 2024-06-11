@@ -37,7 +37,7 @@ const Footer = () => {
 
 	return (
 		<>
-			<div className={`fixed w-full py-5 lg:py-6 z-50 transition-colors duration-300 ${scrollColor} 
+			<div className={`fixed w-full py-3 lg:py-6 z-50 transition-colors duration-300 ${scrollColor} 
 				${scrollShadow ? 'shadow-md' : ''}`}>
 				<div className="flex justify-between items-center w-full lg:w-full xl:w-full lg:px-10 px-4 mx-auto">
 				  <div className="w-full pl-4 lg:pl-0 xl:pl-0 md:pl-4">
@@ -62,7 +62,7 @@ const Footer = () => {
 
 				  <img
 				  	className="block lg:hidden xl:hidden md:hidden cursor-pointer"
-				  	width="50" height="50" src="https://img.icons8.com/ios/50/menu--v1.png" alt="menu--v1"
+				  	width="30" height="30" src="https://img.icons8.com/ios/30/menu--v1.png" alt="menu--v1"
 				  	onClick={toggleMobileMenu}
 				  />
 				</div>

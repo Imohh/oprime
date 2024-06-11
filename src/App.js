@@ -34,7 +34,7 @@ function App() {
         flex flex-col items-center justify-center
         bg-[#e9eef180]">
         <div className="text-center xl:w-3/5 lg:w-3/5 md:w-3/5 w-4/5 m-auto xl:mt-o lg:mt-o md:mt-o mt-10">
-          <p className="text-3xl font-semibold">We help companies have a digital presence</p>
+          <p className="xl:text-3xl lg:text-3xl md:text-2xl text-xl font-semibold">We help companies have a digital presence</p>
           <p className="mt-10">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
           dedicated to helping brands thrive in the online landscape. We specialize in crafting exceptional 
           websites and innovative mobile applications tailored to meet your unique business needs.</p>
@@ -44,7 +44,7 @@ function App() {
 
       {/*ABOUT*/}
       <div className="xl:px-20 xl:py-[80px] px-3 py-10">
-        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold pb-5 tracking-[.1em]">about us</p>
+        <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold pb-5 tracking-[.1em]">about us</p>
         <div className="xl:px-[20%] p-10 text-center">
           <p className="text-lg">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
           dedicated to helping brands thrive in the online landscape. We specialize in crafting 
@@ -59,12 +59,12 @@ function App() {
 
       {/*SERVICES*/}
       <div className="xl:px-20 lx:py-20 px-3 py-10 bg-[#e9eef180]">
-        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold py-10 tracking-[.1em]">services</p>
+        <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">services</p>
         <div className="xl:p-20 lg:p-20 p-4 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#f1f1f1] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4" width="100" height="100" src="https://img.icons8.com/fluency/100/internet.png" alt="website development"/>
-            <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">website development</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">website development</p>
             <p className="text-lg">Unlock the potential of your online presence with our cutting-edge website development services. 
             We create visually appealing, user-friendly websites that not only showcase your brand 
             story but also engage your audience effectively. Whether you need a corporate website, a portfolio site, or a blog, 
@@ -73,7 +73,7 @@ function App() {
           <div className="bg-white rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4" width="100" height="100" src="https://img.icons8.com/officel/100/shopping-cart.png" alt="E-Commerce"/>
-            <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">e-commerce</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">e-commerce</p>
             <p className="text-lg">Take your business to new heights with our powerful e-commerce solutions. 
             We create online stores that not only captivate your customers but also streamline the buying process. 
             From intuitive product catalogs to secure payment gateways, we provide end-to-end 
@@ -82,7 +82,7 @@ function App() {
           <div className="bg-[#f1f1f1] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4" width="100" height="100" src="https://img.icons8.com/emoji/100/mobile-phone.png" alt="mobile-application"/>
-            <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">mobile application development</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">mobile application development</p>
             <p className="text-lg">In the age of smartphones, having a mobile application is essential for reaching a wider audience. 
             Our expert developers create dynamic and interactive mobile applications across platforms, 
             catering to various industries and business needs. Whether you need an iOS app, an Android app, or a cross-platform solution, 
@@ -120,10 +120,9 @@ function App() {
         </div>
       </div>
 
-      {/*CLIENTS*/}
 
 
-
+      {/*WORK*/}
       <div className="xl:px-[20%] px-10 xl:py-20 lg:py-20 md:py-20 py-10 text-center">
           <h3 className="xl:text-4xl lg:text-4xl md:text-3xl text-2xl uppercase text-custom-gray-head-text font-semibold tracking-[.15em] mb-10">our works</h3>
 
@@ -165,9 +164,9 @@ function App() {
 
 
 
-
-      <div className="xl:px-40 xl:py-[40px] px-5 py-20 bg-[#ff5757]">
-        <p className="text-center text-white uppercase text-4xl font-bold py-10 tracking-[.1em]">our clients</p>
+      {/*CLIENTS*/}
+      <div className="xl:px-40 xl:py-[40px] lg:px-40 lg:py-[40px] px-5 py-10 bg-[#ff5757]">
+        <p className="text-center text-white uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">our clients</p>
         <div className="xl:flex xl:flex-row xl:items-center xl:justify-center xl:space-x-2 xl:py-[100px]
           lg:flex lg:flex-row lg:items-center lg:justify-center lg:space-x-2
           grid grid-cols-1 space-y-8">
@@ -191,7 +190,7 @@ function App() {
 
       {/*WHY CHOOSE US*/}
       <div className="xl:px-20 lx:py-20 px-3 py-10">
-        <p className="text-center text-[#ff5757] uppercase text-4xl font-bold py-10 tracking-[.1em]">why choose us ?</p>
+        <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">why choose us ?</p>
         <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#fff] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
@@ -200,7 +199,7 @@ function App() {
               height="100" 
               src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/external-affordable-cleaning-flaticons-flat-flat-icons-2.png" 
               alt="external-affordable-cleaning-flaticons-flat-flat-icons-2"/>
-            <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">affordable</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">affordable</p>
             <p className="text-lg">Quality digital solutions shouldn’t come with a hefty price tag. We offer competitive and transparent pricing, 
             ensuring you get the best value for your investment. Our flexible packages cater to businesses of all sizes, 
             from startups to established enterprises. We work with you to find a solution that aligns with your budget and objectives.</p>
@@ -212,7 +211,7 @@ function App() {
               height="100" 
               src="https://img.icons8.com/plasticine/100/time.png" 
               alt="time"/>
-            <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">quality assurance and timely delivery</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">quality assurance and timely delivery</p>
             <p className="text-lg">We are committed to delivering top-notch quality in every project we undertake. 
             Our rigorous quality assurance processes guarantee that your website, e-commerce platform, 
             or mobile application functions seamlessly across all devices and platforms. 
@@ -227,7 +226,7 @@ function App() {
               height="100" 
               src="https://img.icons8.com/fluency/100/group.png" 
               alt="group"/>
-            <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">experienced team of experts</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">experienced team of experts</p>
             <p className="text-lg">Our team comprises of highly skilled professionals who are experts in their respective fields. 
             From web designers and developers to e-commerce specialists and mobile app developers, 
             we have a cohesive team that collaborates seamlessly to deliver outstanding results. With years of experience, 
@@ -243,14 +242,14 @@ function App() {
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
-        <p className="text-center text-white uppercase text-4xl font-bold pb-4 xl:pt-10 lg:pt-10 tracking-[.1em]">contact us</p>
+        <p className="text-center text-white uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold pb-4 xl:pt-10 lg:pt-10 tracking-[.1em]">contact us</p>
         <p className="text-center text-white capitalize pb-10">what are you waiting for? fill the form and we will be in touch.</p>
-        <div className="p-10 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
+        <div className="xl:p-10 lg:p-10 md:p-10 p-4 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
           <div>
             {/*<img src={contactImage} alt="map" />*/}
           </div>
-          <div className="px-10 my-auto">
-            <div className="bg-white px-10 py-20 shadow-md">
+          <div className="xl:px-10 lg:px-10 md:px-10 px-4 my-auto">
+            <div className="bg-white xl:px-10 lg:px-10 md:px-10 px-7 py-20 shadow-md">
               <form>
                 <label className="text-black mb-4 capitalize">full name <span className="text-red-500">*</span></label>
                 <input
@@ -286,16 +285,16 @@ function App() {
         <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-10 mb-10">
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={phone} alt="" width="30" height="40" />          
-            <p className="uppercase text-white text-2xl mb-2">phone</p>
+            <p className="uppercase text-white text-2xl font-semibold mb-2">phone</p>
             <p className="text-white text-lg">+234 802 060 0313</p>
           </div>
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={email} alt="" width="30" height="40" />
-            <p className="uppercase text-white text-2xl mb-2">email address</p>
+            <p className="uppercase text-white text-2xl font-semibold mb-2">email address</p>
             <p className="text-white">info@oprime.com.ng</p>
           </div>
           <div className="text-center mx-auto">
-            <p className="uppercase text-white text-2xl mb-2">follow us</p>
+            <p className="uppercase text-white text-2xl font-semibold mb-2">follow us</p>
             <div className="flex flex-row items-center justify-center">
               <a href="https://instagram.com/oprime.ng" target="_blank"><img className="w-8 h-8" src={instagram} alt="" /></a>
               <a href="https://twitter.com/oprimeng" target="_blank"><img className="w-8 h-8" src={x} alt="" /></a>
