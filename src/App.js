@@ -9,14 +9,30 @@ import instagram from './images/instagram.png'
 import x from './images/x.png'
 import phone from './images/phone.png'
 import email from './images/email.png'
+import worldmap from './images/map.jpg'
+import hero from './images/hero.png'
+import chekam from './images/clients/chekam.png'
+import recreate from './images/clients/recreate.png'
+import joel from './images/clients/joel.png'
+import glintz from './images/clients/glintz-white.png'
+import eminence from './images/clients/eminence.png'
 
 function App() {
   return (
     <div>
       <Navbar />
       {/*HERO*/}
-      <div>
-
+      <div className="
+        py-40 px-20
+        flex flex-col items-center justify-center
+        bg-[#e9eef180]">
+        <div className="text-center w-3/5 m-auto">
+          <p className="text-3xl font-semibold">We help companies have a digital presence</p>
+          <p className="mt-10">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
+          dedicated to helping brands thrive in the online landscape. We specialize in crafting exceptional 
+          websites and innovative mobile applications tailored to meet your unique business needs.</p>
+          <img src={hero} alt="image" className="mt-10 mx-auto" />
+        </div>
       </div>
 
       {/*ABOUT*/}
@@ -40,7 +56,7 @@ function App() {
         <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#f1f1f1] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
-              className="mb-4" width="100" height="100" src="https://img.icons8.com/fluency/100/internet.png" alt="internet"/>
+              className="mb-4" width="100" height="100" src="https://img.icons8.com/fluency/100/internet.png" alt="website development"/>
             <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">website development</p>
             <p className="text-lg">Unlock the potential of your online presence with our cutting-edge website development services. 
             We create visually appealing, user-friendly websites that not only showcase your brand 
@@ -49,7 +65,7 @@ function App() {
           </div>
           <div className="bg-white rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
-              className="mb-4" width="100" height="100" src="https://img.icons8.com/officel/100/shopping-cart.png" alt="shopping-cart"/>
+              className="mb-4" width="100" height="100" src="https://img.icons8.com/officel/100/shopping-cart.png" alt="E-Commerce"/>
             <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">e-commerce</p>
             <p className="text-lg">Take your business to new heights with our powerful e-commerce solutions. 
             We create online stores that not only captivate your customers but also streamline the buying process. 
@@ -58,7 +74,7 @@ function App() {
           </div>
           <div className="bg-[#f1f1f1] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
-              className="mb-4" width="100" height="100" src="https://img.icons8.com/emoji/100/mobile-phone.png" alt="mobile-phone"/>
+              className="mb-4" width="100" height="100" src="https://img.icons8.com/emoji/100/mobile-phone.png" alt="mobile-application"/>
             <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">mobile application development</p>
             <p className="text-lg">In the age of smartphones, having a mobile application is essential for reaching a wider audience. 
             Our expert developers create dynamic and interactive mobile applications across platforms, 
@@ -79,7 +95,7 @@ function App() {
             p-36 lg:p-72 relative mx-auto">
               <div className="bg-red-500 mr-40 rounded-full">
                 <img className="
-                  lg:w-2/3 xl:w-10/12 h-auto h-fit lg:h-fit 
+                  lg:w-2/3 xl:w-9/12 h-auto h-fit lg:h-fit 
                   absolute top-1/2 left-0 xl:left-18 lg:left-12 
                   transform -translate-y-1/2"
                     src={section} alt="grep mockup" 
@@ -93,6 +109,30 @@ function App() {
             <p className="italic font-semibold xl:text-4xl lg:text-3xl md:text-2xl text-xl mx-2 text-center mt-10 xl:mt-0 lg:mt-0 md:mt-0">empowering businesses with digital excellence...</p>
             <img width="30" height="10" src={apostrophe} alt="comma--v1"/>
             <img width="30" height="10" src={apostrophe} alt="comma--v1"/>
+          </div>
+        </div>
+      </div>
+
+      {/*CLIENTS*/}
+      <div className="xl:px-40 xl:py-[200px] px-5 py-20 bg-[#ff5757]">
+        <p className="text-center text-white uppercase text-4xl font-bold pb-20 tracking-[.1em]">our clients</p>
+        <div className="xl:flex xl:flex-row xl:items-center xl:justify-center xl:space-x-2
+          lg:flex lg:flex-row lg:items-center lg:justify-center lg:space-x-2
+          grid grid-cols-1 space-y-8">
+          <div className="flex justify-center">
+            <img src={glintz} alt="logo" className="xl:w-full lg:w-2/5 w-2/5" />
+          </div>
+          <div className="flex justify-center">
+            <img src={chekam} alt="logo" className="xl:w-3/5 lg:w-2/5 w-2/5" />
+          </div>
+          <div className="flex justify-center">
+            <img src={recreate} alt="logo" className="xl:w-full lg:w-full w-2/5" />
+          </div>
+          <div className="flex justify-center">
+            <img src={joel} alt="logo" className="xl:w-1/5 lg:w-1/5 w-1/5" />
+          </div>
+          <div className="flex justify-center">
+            <img src={eminence} alt="logo" className="xl:w-full lg:w-full w-2/5" />
           </div>
         </div>
       </div>
@@ -144,55 +184,62 @@ function App() {
       </div>
 
       {/*CONTACT*/}
-      <div className="xl:px-20 lx:py-20 px-3 py-10 bg-[#191a1a]">
+      <div className="xl:px-20 lx:py-20 px-3 py-10 "
+        style={{
+          backgroundImage: `url(${worldmap})`, 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}>
         <p className="text-center text-white uppercase text-4xl font-bold pb-4 xl:pt-10 lg:pt-10 tracking-[.1em]">contact us</p>
         <p className="text-center text-white capitalize pb-10">what are you waiting for? fill the form and we will be in touch.</p>
         <div className="p-10 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
           <div>
-            <img src={contactImage} alt="map" />
+            {/*<img src={contactImage} alt="map" />*/}
           </div>
           <div className="px-10 my-auto">
-            <form>
-            <label className="text-white mb-4">Full name <span className="text-red-500">*</span></label>
-              <input
-                className="p-4 mb-6 w-full border rounded-md shadow-md"
-                type="text"
-                placeholder="John"
-                value=""
-                name=""
-              />
+            <div className="bg-white px-10 py-20 shadow-md">
+              <form>
+                <label className="text-black mb-4 capitalize">full name <span className="text-red-500">*</span></label>
+                <input
+                  className="p-4 mb-6 w-full border border-slate-500 rounded-md shadow-md"
+                  type="text"
+                  placeholder="John"
+                  value=""
+                  name=""
+                />
 
-              <label className="text-white mb-4">E-mail address <span className="text-red-500">*</span></label>
-              <input
-                className="p-4 mb-4 w-full border rounded-md shadow-md"
-                type="text"
-                placeholder="john123@email.com"
-                value=""
-                name=""
-              />
+                <label className="text-black mb-4 capitalize">email <span className="text-red-500">*</span></label>
+                <input
+                  className="p-4 mb-4 w-full border border-slate-500 rounded-md shadow-md"
+                  type="text"
+                  placeholder="example@mail.com"
+                  value=""
+                  name=""
+                />
 
-              <label className="text-white mb-4">Message </label>
-              <textarea
-                className="p-4 mb-4 w-full border rounded-md shadow-md"
-                type="text"
-                placeholder="message"
-                value=""
-                name=""
-              />
-              <button className="bg-[#ff5757] w-full text-white py-4 px-6 capitalize rounded-md float-right">send message</button>
-            </form>
+                <label className="text-black mb-4 capitalize">your message </label>
+                <textarea
+                  className="p-4 mb-4 w-full border border-slate-500 rounded-md shadow-md"
+                  type="text"
+                  placeholder="What's your message"
+                  value=""
+                  name=""
+                />
+                <button className="bg-[#ff5757] w-full text-white py-4 px-6 capitalize rounded-md float-right">send message</button>
+              </form>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-3 mb-10">
           <div className="text-center mx-auto">
-            <img className="inline-block mb-2" src={phone} alt="" />          
+            <img className="inline-block mb-2" src={phone} alt="" width="30" height="40" />          
             <p className="uppercase text-white text-2xl mb-2">phone</p>
             <p className="text-white text-lg">+234 802 060 0313</p>
           </div>
           <div className="text-center mx-auto">
-            <img className="inline-block mb-2" src={email} alt="" />
+            <img className="inline-block mb-2" src={email} alt="" width="30" height="40" />
             <p className="uppercase text-white text-2xl mb-2">email address</p>
-            <p className="text-white">info@oprime.tech</p>
+            <p className="text-white">info@oprime.com.ng</p>
           </div>
           <div className="text-center mx-auto">
             <p className="uppercase text-white text-2xl mb-2">follow us</p>
