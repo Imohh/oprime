@@ -60,8 +60,8 @@ function App() {
       {/*SERVICES*/}
       <div className="xl:px-20 lx:py-20 px-3 py-10 bg-[#e9eef180]">
         <p className="text-center text-[#ff5757] uppercase text-4xl font-bold py-10 tracking-[.1em]">services</p>
-        <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          <div className="bg-[#f1f1f1] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
+        <div className="xl:p-20 lg:p-20 p-4 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+          <div className="bg-[#f1f1f1] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4" width="100" height="100" src="https://img.icons8.com/fluency/100/internet.png" alt="website development"/>
             <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">website development</p>
@@ -70,7 +70,7 @@ function App() {
             story but also engage your audience effectively. Whether you need a corporate website, a portfolio site, or a blog, 
             we have the expertise to deliver stunning and responsive designs that leave a lasting impression.</p>
           </div>
-          <div className="bg-white rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
+          <div className="bg-white rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4" width="100" height="100" src="https://img.icons8.com/officel/100/shopping-cart.png" alt="E-Commerce"/>
             <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">e-commerce</p>
@@ -79,7 +79,7 @@ function App() {
             From intuitive product catalogs to secure payment gateways, we provide end-to-end 
             e-commerce services designed to boost your sales and customer satisfaction.</p>
           </div>
-          <div className="bg-[#f1f1f1] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
+          <div className="bg-[#f1f1f1] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4" width="100" height="100" src="https://img.icons8.com/emoji/100/mobile-phone.png" alt="mobile-application"/>
             <p className="text-center text-xl uppercase font-semibold pb-5 tracking-[.07em]">mobile application development</p>
@@ -111,11 +111,11 @@ function App() {
             </div>
           </div>
           <div className="my-auto flex flex-row">
-            <img width="30" height="10" src={apostrophe2} alt="comma--v1"/>
-            <img width="30" height="10" src={apostrophe2} alt="comma--v1"/>
+            <img className="w-[10%] h-[10%]" src={apostrophe2} alt="comma--v1"/>
+            <img className="w-[10%] h-[10%]" src={apostrophe2} alt="comma--v1"/>
             <p className="italic font-semibold xl:text-4xl lg:text-3xl md:text-2xl text-xl mx-2 text-center mt-10 xl:mt-0 lg:mt-0 md:mt-0">empowering businesses with digital excellence...</p>
-            <img width="30" height="10" src={apostrophe} alt="comma--v1"/>
-            <img width="30" height="10" src={apostrophe} alt="comma--v1"/>
+            <img className="w-[10%] h-[10%]" src={apostrophe} alt="comma--v1"/>
+            <img className="w-[10%] h-[10%]" src={apostrophe} alt="comma--v1"/>
           </div>
         </div>
       </div>
@@ -193,7 +193,7 @@ function App() {
       <div className="xl:px-20 lx:py-20 px-3 py-10">
         <p className="text-center text-[#ff5757] uppercase text-4xl font-bold py-10 tracking-[.1em]">why choose us ?</p>
         <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-          <div className="bg-[#fff] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
+          <div className="bg-[#fff] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4"
               width="100" 
@@ -205,7 +205,7 @@ function App() {
             ensuring you get the best value for your investment. Our flexible packages cater to businesses of all sizes, 
             from startups to established enterprises. We work with you to find a solution that aligns with your budget and objectives.</p>
           </div>
-          <div className="bg-[#f1f1f1] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
+          <div className="bg-[#f1f1f1] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4"
               width="100" 
@@ -219,7 +219,8 @@ function App() {
             We also understand the importance of time in the digital world. Timely delivery is our promise, 
             ensuring you can launch your digital presence as planned.</p>
           </div>
-          <div className="bg-[#fff] rounded-2xl p-10 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
+          <div className="bg-[#fff] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] 
+          hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4"
               width="100" 
