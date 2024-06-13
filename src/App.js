@@ -1,3 +1,5 @@
+import React, {useState} from 'react'
+import emailjs from '@emailjs/browser';
 import './index.css'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -25,6 +27,43 @@ import glintzImg from './images/clients/glintz.png'
 import mickkycutzImg from './images/clients/mickkycutz.png'
 
 function App() {
+
+  const [formData, setFormData] = useState({
+    from_name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send('service_9jjxhze', 'template_3qas9qp', formData, {
+        publicKey: 'RbG8xAVSd5MnOHIwn',
+      })
+    .then(
+      (response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setFormData({
+          from_name: '',
+          email: '',
+          message: '',
+        });
+        // Display success alert
+        alert('Contact form submitted successfully!');
+      },
+      (err) => {
+        console.log('FAILED...', err);
+      },
+    );
+
+  }
+
+
   return (
     <div>
       <Navbar />
@@ -191,7 +230,7 @@ function App() {
       {/*WHY CHOOSE US*/}
       <div className="xl:px-20 lx:py-20 px-3 py-10">
         <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">why choose us ?</p>
-        <div className="xl:p-20 p-10 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+        <div className="xl:p-20 lg:p-20 p-4 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#fff] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
             <img 
               className="mb-4"
@@ -250,14 +289,15 @@ function App() {
           </div>
           <div className="xl:px-10 lg:px-10 md:px-10 px-4 my-auto">
             <div className="bg-white xl:px-10 lg:px-10 md:px-10 px-7 py-20 shadow-md">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <label className="text-black mb-4 capitalize">full name <span className="text-red-500">*</span></label>
                 <input
-                  className="p-4 mb-6 w-full border border-slate-500 rounded-md shadow-md"
+                  className="p-4 mb-6 w-full border border-slate-500 rounded-md shadow-md capitalize"
                   type="text"
                   placeholder="John"
-                  value=""
-                  name=""
+                  value={formData.from_name}
+                  name="from_name"
+                  onChange={handleChange}
                 />
 
                 <label className="text-black mb-4 capitalize">email <span className="text-red-500">*</span></label>
@@ -265,8 +305,9 @@ function App() {
                   className="p-4 mb-4 w-full border border-slate-500 rounded-md shadow-md"
                   type="text"
                   placeholder="example@mail.com"
-                  value=""
-                  name=""
+                  value={formData.email}
+                  name="email"
+                  onChange={handleChange}
                 />
 
                 <label className="text-black mb-4 capitalize">your message </label>
@@ -274,8 +315,9 @@ function App() {
                   className="p-4 mb-4 w-full border border-slate-500 rounded-md shadow-md"
                   type="text"
                   placeholder="What's your message"
-                  value=""
-                  name=""
+                  value={formData.message}
+                  name="message"
+                  onChange={handleChange}
                 />
                 <button className="bg-[#ff5757] w-full text-white py-4 px-6 capitalize rounded-md float-right">send message</button>
               </form>
@@ -286,12 +328,12 @@ function App() {
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={phone} alt="" width="30" height="40" />          
             <p className="uppercase text-white text-2xl font-semibold mb-2">phone</p>
-            <p className="text-white text-lg">+234 802 060 0313</p>
+            <p className="text-white text-lg"><a href="tel:+2348020600313">+234 802 060 0313</a></p>
           </div>
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={email} alt="" width="30" height="40" />
             <p className="uppercase text-white text-2xl font-semibold mb-2">email address</p>
-            <p className="text-white">info@oprime.com.ng</p>
+            <p className="text-white"><a href="mailto:info@oprime.com.ng">info@oprime.com.ng</a></p>
           </div>
           <div className="text-center mx-auto">
             <p className="uppercase text-white text-2xl font-semibold mb-2">follow us</p>
