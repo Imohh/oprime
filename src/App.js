@@ -119,8 +119,9 @@ function App() {
       </div>
 
       {/*ABOUT*/}
-      <div ref={aboutRef}  className="xl:px-20 xl:py-[80px] px-3 py-10">
-        <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold pb-5 tracking-[.1em]">about us</p>
+      <div ref={aboutRef}  className="xl:px-20 xl:py-20 px-3 py-10">
+        <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">about us</p>
+        
         <div className="xl:px-[20%] p-10 text-center">
           <p className="text-lg">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
           dedicated to helping brands thrive in the online landscape. We specialize in crafting 
@@ -318,7 +319,7 @@ function App() {
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}>
-        <p className="text-center text-white uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold pb-4 xl:pt-10 lg:pt-10 tracking-[.1em]">contact us</p>
+        <p className="text-center text-white uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 xl:pt-10 lg:pt-10 tracking-[.1em]">contact us</p>
         <p className="text-center text-white capitalize pb-10">what are you waiting for? fill the form and we will be in touch.</p>
         <div className="xl:p-10 lg:p-10 md:p-10 p-4 grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
           <div>

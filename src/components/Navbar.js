@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import apostrophe from '../images/apostrophe.png'
+// import apostrophe from '../images/apostrophe.png'
 
 const Navbar = ({ refs }) => {
 	const [show, setShow] = useState(false)
@@ -42,7 +42,7 @@ const Navbar = ({ refs }) => {
 	  setShow(false);
 
 	  const targetElement = ref.current;
-	  const targetPosition = targetElement.getBoundingClientRect().top; // Get target section's top position relative to viewport
+	  // const targetPosition = targetElement.getBoundingClientRect().top; // Get target section's top position relative to viewport
 
 	  document.body.style.transition = 'scroll-top 0.5s ease-in-out';
 
@@ -107,9 +107,9 @@ const Navbar = ({ refs }) => {
 				    >
 						<div className="px-2 pt-2 pb-10 space-y-1">
 					      <a href="/" className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">home</a>
-					      <a href="/about" className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">about</a>
-					      <a href="/services" className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">services</a>
-					      <a href="/contact" className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">contact</a>
+					      <a href="#about" onClick={() => scrollToSection(refs.aboutRef)} className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">about</a>
+					      <a href="#services" onClick={() => scrollToSection(refs.servicesRef)} className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">services</a>
+					      <a href="#contact" onClick={() => scrollToSection(refs.contactRef)} className="text-black block px-3 py-2 rounded-md text-base font-medium capitalize">contact</a>
 					      
 					    </div>
 					</div>
