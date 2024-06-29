@@ -277,10 +277,10 @@ function App() {
               height="70" 
               src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/external-affordable-cleaning-flaticons-flat-flat-icons-2.png" 
               alt="external-affordable-cleaning-flaticons-flat-flat-icons-2"/>
-            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">affordable</p>
-            <p className="text-base text-center">Quality digital solutions shouldn’t come with a hefty price tag. We offer competitive and transparent pricing, 
-            ensuring you get the best value for your investment. Our flexible packages cater to businesses of all sizes, 
-            from startups to established enterprises. We work with you to find a solution that aligns with your budget and objectives.</p>
+            <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">Scalability</p>
+            <p className="text-base text-center">Scalability ensures that web and mobile applications can handle increased loads without compromising performance. 
+            As your business grows, scalable solutions allow for seamless expansion and adaptation, using robust architectures like microservices. 
+            This prevents performance bottlenecks, maintaining a smooth user experience as demands increase.</p>
           </div>
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
