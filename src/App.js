@@ -11,6 +11,7 @@ import apostrophe2 from './images/apostrophe2.png'
 import instagram from './images/instagram.png'
 import x from './images/x.png'
 import phone from './images/phone.png'
+import follow from './images/follow.png'
 import email from './images/email.png'
 import worldmap from './images/map.jpg'
 import hero from './images/hero.png'
@@ -140,7 +141,7 @@ function App() {
         <div className="xl:p-20 lg:p-20 p-4 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
-              className="mb-4" width="100" height="100" src="https://img.icons8.com/fluency/100/internet.png" alt="website development"/>
+              className="mb-4" width="70" height="70" src="https://img.icons8.com/fluency/100/internet.png" alt="website development"/>
             <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">website development</p>
             <p className="text-base text-center">Unlock the potential of your online presence with our cutting-edge website development services. 
             We create visually appealing, user-friendly websites that not only showcase your brand 
@@ -149,7 +150,7 @@ function App() {
           </div>
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
-              className="mb-4" width="100" height="100" src="https://img.icons8.com/officel/100/shopping-cart.png" alt="E-Commerce"/>
+              className="mb-4" width="70" height="70" src="https://img.icons8.com/officel/100/shopping-cart.png" alt="E-Commerce"/>
             <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">e-commerce</p>
             <p className="text-base text-center">Take your business to new heights with our powerful e-commerce solutions. 
             We create online stores that not only captivate your customers but also streamline the buying process. 
@@ -158,7 +159,7 @@ function App() {
           </div>
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
-              className="mb-4" width="100" height="100" src="https://img.icons8.com/emoji/100/mobile-phone.png" alt="mobile-application"/>
+              className="mb-4" width="70" height="70" src="https://img.icons8.com/emoji/100/mobile-phone.png" alt="mobile-application"/>
             <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">mobile application development</p>
             <p className="text-base text-center">In the age of smartphones, having a mobile application is essential for reaching a wider audience. 
             Our expert developers create dynamic and interactive mobile applications across platforms, 
@@ -272,8 +273,8 @@ function App() {
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
               className="mb-4"
-              width="100" 
-              height="100" 
+              width="70" 
+              height="70" 
               src="https://img.icons8.com/external-flaticons-flat-flat-icons/100/external-affordable-cleaning-flaticons-flat-flat-icons-2.png" 
               alt="external-affordable-cleaning-flaticons-flat-flat-icons-2"/>
             <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">affordable</p>
@@ -284,8 +285,8 @@ function App() {
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
               className="mb-4"
-              width="100" 
-              height="100" 
+              width="70" 
+              height="70" 
               src="https://img.icons8.com/plasticine/100/time.png" 
               alt="time"/>
             <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">quality assurance and timely delivery</p>
@@ -298,8 +299,8 @@ function App() {
           <div className="xl:p-10 lg:p-10 md:p-10 p-4 cursor-pointer flex flex-col items-center">
             <img 
               className="mb-4"
-              width="100" 
-              height="100" 
+              width="70" 
+              height="70" 
               src="https://img.icons8.com/fluency/100/group.png" 
               alt="group"/>
             <p className="text-center xl:text-xl lg:text-xl md:text-xl text-lg uppercase font-semibold pb-5 tracking-[.07em]">experienced team of experts</p>
@@ -386,12 +387,13 @@ function App() {
             <p className="uppercase text-white text-2xl font-semibold mb-2">phone</p>
             <p className="text-white text-lg"><a href="tel:+2348020600313">+234 802 060 0313</a></p>
           </div>
-          <div className="text-center mx-auto">
+          {/*<div className="text-center mx-auto">
             <img className="inline-block mb-2" src={email} alt="" width="30" height="40" />
             <p className="uppercase text-white text-2xl font-semibold mb-2">email address</p>
             <p className="text-white"><a href="mailto:info@oprime.com.ng">info@oprime.com.ng</a></p>
-          </div>
+          </div>*/}
           <div className="text-center mx-auto">
+            <img className="inline-block mb-2" src={follow} alt="" width="30" height="40" />
             <p className="uppercase text-white text-2xl font-semibold mb-2">follow us</p>
             <div className="flex flex-row items-center justify-center">
               <a href="https://instagram.com/oprime.ng" target="_blank"><img className="w-8 h-8" src={instagram} alt="" /></a>
