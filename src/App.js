@@ -123,7 +123,7 @@ function App() {
         <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">about us</p>
         
         <div className="xl:px-[20%] p-10 text-center">
-          <p className="text-lg">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
+          <p className="text-base">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
           dedicated to helping brands thrive in the online landscape. We specialize in crafting 
           exceptional websites and innovative mobile applications tailored to meet your unique business needs.</p>
 
@@ -188,7 +188,7 @@ function App() {
             </div>
           </div>
           <div className="my-auto">
-            <div className="flex flex-row mb-5">
+            <div className="flex flex-row xl:mb-5 lg:mb-5 md:mb-5 mb-0 xl:mt-0 lg:mt-0 md:mt-0 mt-10">
               <img className="w-[5%] h-[5%]" src={apostrophe2} alt="comma--v1"/>
               <img className="w-[5%] h-[5%]" src={apostrophe2} alt="comma--v1"/>
             </div>

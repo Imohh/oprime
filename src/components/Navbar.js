@@ -77,14 +77,14 @@ const Navbar = ({ refs }) => {
 				    lg:shadow-none
 				    lg:justify-end
 				    lg:w-full">
-				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" href="/">home</a>
-				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" 
+				    <a className="mr-8 capitalize text-base text-black-900 hover:text-black-600" href="/">home</a>
+				    <a className="mr-8 capitalize text-base text-black-900 hover:text-black-600" 
 				    	href="#about" 
 				    	onClick={() => scrollToSection(refs.aboutRef)}>about</a>
-				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" 
+				    <a className="mr-8 capitalize text-base text-black-900 hover:text-black-600" 
 				    	href="#services"
 				    	onClick={() => scrollToSection(refs.servicesRef)}>services</a>
-				    <a className="mr-8 capitalize text-xl text-black-900 hover:text-black-600" 
+				    <a className="mr-8 capitalize text-base text-black-900 hover:text-black-600" 
 				    	href="#contact" 
 				    	onClick={() => scrollToSection(refs.contactRef)}>contact</a>
 				  </div>
