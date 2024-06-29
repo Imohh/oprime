@@ -2,7 +2,17 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        bounceSlow: 'bounceSlow 2s infinite',
+      },
+      keyframes: {
+        bounceSlow: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+      },
+    },
   },
   plugins: [],
 }

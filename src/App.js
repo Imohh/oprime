@@ -114,7 +114,7 @@ function App() {
           <p className="mt-10">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
           dedicated to helping brands thrive in the online landscape. We specialize in crafting exceptional 
           websites and innovative mobile applications tailored to meet your unique business needs.</p>
-          <img src={hero} alt="image" className="mt-10 mx-auto" />
+          <img src={hero} alt="image" className="mt-10 mx-auto animate-bounceSlow" />
         </div>
       </div>
 
@@ -381,7 +381,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-10 mb-10">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-10 mb-10 py-10">
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={phone} alt="" width="30" height="40" />          
             <p className="uppercase text-white text-2xl font-semibold mb-2">phone</p>
