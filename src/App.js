@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import emailjs from '@emailjs/browser';
 import './index.css'
 import Navbar from './components/Navbar'
@@ -27,12 +27,17 @@ import glintzImg from './images/clients/glintz.png'
 import mickkycutzImg from './images/clients/mickkycutz.png'
 
 function App() {
-
+  
+  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     from_name: '',
     email: '',
     message: '',
   });
+  const aboutRef = useRef(null);
+  const servicesRef = useRef(null);
+  const contactRef = useRef(null);
+
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -61,12 +66,44 @@ function App() {
       },
     );
 
+    // Simulate form submission
+    setTimeout(() => {
+      setSubmitted(true);
+    }, 1000);
+
   }
+
+
+
+
+  // contact button
+  const [loadingState, setLoadingState] = useState('');
+
+  // useEffect(() => {
+  //   const resize = () => {
+  //     document.body.style.marginTop = `${Math.floor((window.innerHeight - 260) / 2)}px`;
+  //   };
+
+  //   window.addEventListener('resize', resize);
+  //   resize();
+
+  //   return () => window.removeEventListener('resize', resize);
+  // }, []);
+
+  const handleClick = () => {
+    if (loadingState === 'loading-start loading-end') {
+      setLoadingState('');
+    } else {
+      setTimeout(() => setLoadingState('loading-start'), 0);
+      setTimeout(() => setLoadingState('loading-start loading-progress'), 500);
+      setTimeout(() => setLoadingState('loading-start loading-progress loading-end'), 1500);
+    }
+  };
 
 
   return (
     <div>
-      <Navbar />
+      <Navbar refs={{ aboutRef, servicesRef, contactRef }} />
       {/*HERO*/}
       <div className="
         xl:py-40 xl:px-20 lg:py-40 lg:px-20 py-20 px-4
@@ -82,7 +119,7 @@ function App() {
       </div>
 
       {/*ABOUT*/}
-      <div className="xl:px-20 xl:py-[80px] px-3 py-10">
+      <div ref={aboutRef}  className="xl:px-20 xl:py-[80px] px-3 py-10">
         <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold pb-5 tracking-[.1em]">about us</p>
         <div className="xl:px-[20%] p-10 text-center">
           <p className="text-lg">Established in 2020, Oprime Tech is a pioneering force in the digital realm, 
@@ -97,7 +134,7 @@ function App() {
       </div>
 
       {/*SERVICES*/}
-      <div className="xl:px-20 lx:py-20 px-3 py-10 bg-[#e9eef180]">
+      <div ref={servicesRef} className="xl:px-20 lx:py-20 px-3 py-10 bg-[#e9eef180]">
         <p className="text-center text-[#ff5757] uppercase xl:text-4xl lg:text-4xl md:text-3xl text-2xl font-bold py-10 tracking-[.1em]">services</p>
         <div className="xl:p-20 lg:p-20 p-4 grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
           <div className="bg-[#f1f1f1] rounded-2xl xl:p-10 lg:p-10 md:p-10 p-4 shadow-md cursor-pointer hover:bg-[#000] hover:text-white transition delay-50 flex flex-col items-center">
@@ -167,7 +204,7 @@ function App() {
 
           {/*GALLERY*/}
           <div id="flexbox" className="flex items-center justify-center">
-              <div class="column">
+              <div className="column">
                 <a href="https://joeladu.com">
                   <img src={joelImg} alt="Image" width="100%" />
                 </a>
@@ -176,7 +213,7 @@ function App() {
                 </a>
                 {/*<img src={third} alt="Image" width="100%" />*/}
               </div>
-              <div class="column">
+              <div className="column">
                 <a href="https://glintzphotography.org">
                   <img src={glintzImg} alt="Image" width="100%" />
                 </a>
@@ -184,7 +221,7 @@ function App() {
                   <img src={recreateImg} alt="Image" width="100%" />
                 </a>
               </div>
-              <div class="column">
+              <div className="column">
                 <a href="https://mickkycutz.africa">
                   <img src={mickkycutzImg} alt="Image" width="100%" />
                 </a>
@@ -275,7 +312,7 @@ function App() {
       </div>
 
       {/*CONTACT*/}
-      <div className="xl:px-20 lx:py-20 px-3 py-10 "
+      <div ref={contactRef}  className="xl:px-20 lx:py-20 px-3 py-10 "
         style={{
           backgroundImage: `url(${worldmap})`, 
           backgroundSize: 'cover',
@@ -298,6 +335,7 @@ function App() {
                   value={formData.from_name}
                   name="from_name"
                   onChange={handleChange}
+                  required
                 />
 
                 <label className="text-black mb-4 capitalize">email <span className="text-red-500">*</span></label>
@@ -308,6 +346,7 @@ function App() {
                   value={formData.email}
                   name="email"
                   onChange={handleChange}
+                  required
                 />
 
                 <label className="text-black mb-4 capitalize">your message </label>
@@ -318,8 +357,25 @@ function App() {
                   value={formData.message}
                   name="message"
                   onChange={handleChange}
+                  required
                 />
-                <button className="bg-[#ff5757] w-full text-white py-4 px-6 capitalize rounded-md float-right">send message</button>
+
+                {/*<div className={loadingState} onClick={handleClick}>
+                  <a className="submit" href="#">submit</a>
+                  <a className="loading" href="#">loading</a>
+                  <svg id="button" viewBox="0 0 240 220">
+                    <rect id="middle" x="20" y="100" width="200" height="60" rx="30"></rect>
+                    <path id="top" d="M 60,100 L 50,100 C 33.4357078,100 20,113.427814 20,130 L 20,130 C 20,146.568541 33.4331197,160 50,160 L190,160 C206.570288,160 220,146.572314 220,130 L220,100 C220,-60 180, 80 160,100 C140,120 100,160 100,160"></path>
+                    <path id="bottom" d="M180,160 L190,160 C206.564295,160 220,146.572186 220,130 L220,130 C220,113.431458 206.56688,100 190,100 L 50,100 C33.4297125,100 20,113.435296 20,130 C20,130 20,120 20,140 C20,220 180,200 120,140 C100,120 80,100 80,100"></path>
+                  </svg>
+                  <a className="feedback" href="#"></a>
+                </div>*/}
+
+                <button type="submit" className={`submit-button ${submitted ? 'submitted' : ''}`}>
+                  {submitted ? <span>&#10003;</span> : 'Submit'}
+                </button>
+                
+                {/*<button className="bg-[#ff5757] w-full text-white py-4 px-6 capitalize rounded-md float-right">send message</button>*/}
               </form>
             </div>
           </div>

@@ -54,3 +54,215 @@ p {
     max-width: 100%;
   }
 }
+
+
+
+/*CONTACT BUTTON*/
+div .submit {
+  transition: color .5s;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  top: 100px;
+  font-weight: 100;
+  display: block;
+  position: absolute;
+  z-index: 3;
+  text-decoration: none;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  /*color: rgba(255, 255, 255, 1);*/
+  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+div a.loading {
+  color: rgba(255, 255, 255, 0);
+}
+div a.feedback {
+  z-index: 1;
+}
+div a.feedback:after {
+  transition: background .2s, transform .2s;
+  border-radius: 30px;
+  position: absolute;
+  visibility: hidden;
+  width: 200px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: '';
+  background: rgba(255, 255, 255, .9);
+}
+div .submit:hover {
+  background: rgba(255, 255, 255, .1);
+}
+
+#button {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  width: 240px;
+  height: 220px;
+  cursor: pointer;
+  transform: translate3d(0,0,0);
+}
+
+rect {
+  transition: fill .5s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  fill: #3E3F4C;
+}
+
+path {
+  fill: none;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke: #1ECD97;
+  stroke-dashoffset: 0px;
+}
+
+#top, #bottom {
+  transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke .5s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  stroke-dasharray: 295px 1000px;
+}
+
+.loading-start a {
+  color: rgba(255, 255, 255, 0);
+}
+.loading-start a.loading {
+  color: rgba(255, 255, 255, 1);
+}
+.loading-start a.feedback:after {
+  visibility: visible;
+  background: rgba(255, 255, 255, 0);
+  transform: scale(1.5, 2);
+  transform-origin: center;
+}
+
+.loading-start #top, .loading-start #bottom {
+  transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250);
+  stroke-dasharray: 10px 1000px;
+}
+
+.loading-progress #top, .loading-progress #bottom {
+  transition: stroke-dashoffset 1s linear, stroke-dasharray 1s linear;
+  stroke-dasharray: 10px 1000px;
+  stroke-dashoffset: -150px;
+}
+
+.loading-end a.loading {
+  color: rgba(255, 255, 255, 0);
+}
+.loading-end #top, .loading-end #bottom {
+  stroke: #f5f6f7;
+}
+.loading-end #top {
+  transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke .5s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  stroke-dasharray: 30px 1000px;
+  stroke-dashoffset: -518px;
+}
+.loading-end #bottom {
+  transition: stroke-dashoffset .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke-dasharray .5s cubic-bezier(0.250,-0.250, 0.750, 1.250), stroke .5s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  stroke-dasharray: 10px 1000px;
+  stroke-dashoffset: -490px;
+}
+.loading-end rect {
+  fill: #1ECD97 !important;
+}
+
+.dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+
+.dribbble img {
+  display: block;
+  height: 28px;
+}
+
+.twitter {
+  position: fixed;
+  display: block;
+  right: 64px;
+  bottom: 14px;
+}
+
+.twitter svg {
+  width: 32px;
+  height: 32px;
+}
+
+.twitter svg path {    
+  fill: #1da1f2;
+  stroke: none;
+}
+
+
+
+
+
+
+
+
+/* src/AnimatedButton.css */
+.submit-button {
+  background-color: #ff5757;
+  /* background-color: #4caf50; */
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #c96363;
+}
+
+.submit-button.submitted {
+  background-color: #4caf50;
+  color: white;
+  animation: fadeIn 0.5s forwards, scaleUp 0.5s forwards;
+}
+
+.submit-button.submitted span {
+  font-size: 24px;
+  animation: popIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
