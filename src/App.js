@@ -327,7 +327,7 @@ function App() {
           <div className="xl:px-10 lg:px-10 md:px-10 px-4 my-auto">
             <div className="bg-white xl:px-10 lg:px-10 md:px-10 px-7 py-20 shadow-md">
               <form onSubmit={handleSubmit}>
-                <label className="text-black mb-4 capitalize">full name <span className="text-red-500">*</span></label>
+                <label className="text-black text-base mb-4 capitalize">full name <span className="text-red-500">*</span></label>
                 <input
                   className="p-4 mb-6 w-full border border-slate-500 rounded-md shadow-md capitalize"
                   type="text"
@@ -338,7 +338,7 @@ function App() {
                   required
                 />
 
-                <label className="text-black mb-4 capitalize">email <span className="text-red-500">*</span></label>
+                <label className="text-black text-base mb-4 capitalize">email <span className="text-red-500">*</span></label>
                 <input
                   className="p-4 mb-4 w-full border border-slate-500 rounded-md shadow-md"
                   type="text"
@@ -349,7 +349,7 @@ function App() {
                   required
                 />
 
-                <label className="text-black mb-4 capitalize">your message </label>
+                <label className="text-black text-base mb-4 capitalize">your message </label>
                 <textarea
                   className="p-4 mb-4 w-full border border-slate-500 rounded-md shadow-md"
                   type="text"
@@ -380,7 +380,7 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-10 mb-10 py-10">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:space-y-0 lg:space-y-0 md:space-y-0 space-y-10 mb-10 pt-10">
           <div className="text-center mx-auto">
             <img className="inline-block mb-2" src={phone} alt="" width="30" height="40" />          
             <p className="uppercase text-white text-2xl font-semibold mb-2">phone</p>
