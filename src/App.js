@@ -128,7 +128,7 @@ function App() {
           dedicated to helping brands thrive in the online landscape. We specialize in crafting 
           exceptional websites and innovative mobile applications tailored to meet your unique business needs.</p>
 
-          <p className="text-lg mt-5">At Oprime Tech, we believe in the power of digital transformation. Our experienced team of highly 
+          <p className="text-base mt-5">At Oprime Tech, we believe in the power of digital transformation. Our experienced team of highly 
           skilled developers is passionate about creating seamless online experiences that captivate your audience. 
           Whether you're a startup looking to make a mark or an established business aiming for digital evolution, 
           we have the expertise to make it happen.</p>
